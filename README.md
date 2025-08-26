@@ -51,7 +51,7 @@ Kora 语音面试是一个创新的 AI 面试平台，旨在通过模拟真实�
 1.  **启动后端服务**:
     ```bash
     cd api
-    python app.py
+    python index.py
     ```
     后端服务将在 `http://127.0.0.1:5000` 上运行。
 
@@ -63,6 +63,8 @@ Kora 语音面试是一个创新的 AI 面试平台，旨在通过模拟真实�
 
 3.  在浏览器中打开前端应用的地址，开始您的 AI 面试之旅！
 
+4.  也可直接点击该链接访问使用vercel部署好的版本：https://kora-ai-voice-interview.vercel.app/
+
 ## 📂 项目结构
 
 ```
@@ -70,12 +72,14 @@ Kora 语音面试是一个创新的 AI 面试平台，旨在通过模拟真实�
 ├── README.md
 ├── api/
 │   ├── __init__.py
+│   ├── vercel.py       
 │   ├── .env             # 存储环境变量 (需自行创建)
-│   ├── app.py           # Flask 后端主应用
-│   ├── requirements.txt # Python 依赖
+│   ├── index.py           # Flask 后端主应用
 │   └── test.http        # 用于测试 API 的文件
 ├── index.html
 ├── package.json
+├── vercel.json
+│   requirements.txt     # Python 依赖
 ├── src/
 │   ├── App.vue          # Vue 应用根组件
 │   ├── main.js          # Vue 应用入口
@@ -90,7 +94,7 @@ Kora 语音面试是一个创新的 AI 面试平台，旨在通过模拟真实�
 
 ### 关键文件说明
 
--   `backend/app.py`: 实现了所有后端逻辑，包括与 DashScope API 的交互、CORS 配置以及 API 端点。
+-   `backend/index.py`: 实现了所有后端逻辑，包括与 DashScope API 的交互、CORS 配置以及 API 端点。
 -   `src/views/Interview.vue`: 包含了面试页面的所有交互逻辑和 UI，是项目的核心组件之一。
 -   `src/views/Summary.vue`: 用于展示面试完成后的总结报告，包括对话记录和 AI 分析。
 
